@@ -69,7 +69,7 @@ public class LoginTest{
 		
 		driver.get(props.getProperty("URL"));
 		
-		
+		//Create loginPage instance
 		LoginPage loginpage=new LoginPage(driver);
 		driver.manage().timeouts().implicitlyWait(3000,TimeUnit.SECONDS);
 		
