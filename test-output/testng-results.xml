@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-03-18T16:20:25 CET" name="Suite" finished-at="2023-03-18T16:20:42 CET" duration-ms="16670">
+    <groups>
+    </groups>
+    <test started-at="2023-03-18T16:20:25 CET" name="Test" finished-at="2023-03-18T16:20:42 CET" duration-ms="16670">
+      <class name="pageclass.AccountTest">
+        <test-method is-config="true" signature="config()[pri:0, instance:pageclass.AccountTest@413d1baf]" started-at="2023-03-18T16:20:35 CET" name="config" finished-at="2023-03-18T16:20:40 CET" duration-ms="4507" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- config -->
+        <test-method signature="success()[pri:0, instance:pageclass.AccountTest@413d1baf]" started-at="2023-03-18T16:20:40 CET" name="success" finished-at="2023-03-18T16:20:41 CET" duration-ms="1463" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- success -->
+        <test-method is-config="true" signature="closure()[pri:0, instance:pageclass.AccountTest@413d1baf]" started-at="2023-03-18T16:20:41 CET" name="closure" finished-at="2023-03-18T16:20:42 CET" duration-ms="785" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closure -->
+      </class> <!-- pageclass.AccountTest -->
+      <class name="pageclass.LoginTest">
+        <test-method is-config="true" signature="config()[pri:0, instance:pageclass.LoginTest@48075da3]" started-at="2023-03-18T16:20:26 CET" name="config" finished-at="2023-03-18T16:20:33 CET" duration-ms="7071" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- config -->
+        <test-method signature="faillogintest()[pri:0, instance:pageclass.LoginTest@48075da3]" started-at="2023-03-18T16:20:33 CET" name="faillogintest" finished-at="2023-03-18T16:20:34 CET" duration-ms="1183" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- faillogintest -->
+        <test-method signature="logintest()[pri:0, instance:pageclass.LoginTest@48075da3]" started-at="2023-03-18T16:20:34 CET" name="logintest" finished-at="2023-03-18T16:20:35 CET" duration-ms="1208" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logintest -->
+        <test-method is-config="true" signature="closure()[pri:0, instance:pageclass.LoginTest@48075da3]" started-at="2023-03-18T16:20:42 CET" name="closure" finished-at="2023-03-18T16:20:42 CET" duration-ms="340" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closure -->
+      </class> <!-- pageclass.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
