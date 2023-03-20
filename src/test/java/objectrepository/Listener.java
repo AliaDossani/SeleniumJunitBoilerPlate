@@ -21,7 +21,7 @@ public class Listener implements ITestListener {
 	public void onFailure(ITestContext context) throws Exception {
 		System.out.println("Test failed");
 		File screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		File desFile=new File("screenshot/failure.png");
+		File desFile=new File("/Users/arbaazdossani/eclipse-workspace/SelenimJunitBoilerPlate/screenshot/failure.png");
 		 FileUtils.copyFile(screenshot, desFile);
 	}
 }

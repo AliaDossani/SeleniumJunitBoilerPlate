@@ -14,7 +14,7 @@ public class AccountPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//a[text()='Account']")
+	@FindBy(xpath = "//a[text()='Accout']")
 	private WebElement successbreadcrum;
 
 	public WebElement loginsuccessful() {

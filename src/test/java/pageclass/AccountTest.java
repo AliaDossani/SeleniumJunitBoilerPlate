@@ -8,8 +8,10 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -24,60 +26,54 @@ public class AccountTest {
 
 	WebDriver driver;
 	ExtentReports extent;
-	Properties props=new Properties();
+	Properties props = new Properties();
 	FileInputStream fis;
 	ExtentSparkReporter reporter;
-	
+
 	@BeforeClass
-	public void config() throws Exception{
+	public void config() throws Exception {
 //		String filename=System.getProperty("user.dir")+"\\reports\\index.html";
-		ExtentSparkReporter reporter=new ExtentSparkReporter("reports/index.html");
+		ExtentSparkReporter reporter = new ExtentSparkReporter("reports/index.html");
 		reporter.config().setReportName("TutorialsNinja Report");
-		
-	    extent=new ExtentReports();
+
+		extent = new ExtentReports();
 		extent.attachReporter(reporter);
 		extent.setSystemInfo("Projectname", "TutorialsNinja");
 		extent.setSystemInfo("Version", "1");
 		extent.setSystemInfo("Tested By", "Alia");
-		
+
 		WebDriverManager.chromedriver().setup();
-		
+
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
-		
-		driver=new ChromeDriver(options);
+
+		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
-		
-		fis=new FileInputStream("data.properties");
+
+		fis = new FileInputStream("data.properties");
 		props.load(fis);
-		
+
 		driver.get(props.getProperty("URL"));
-		//LoginPage loginpage=new LoginPage(driver);
-		
-		}
+
+	}
+
 	@Test
-	public void success() throws Throwable {
-		ExtentTest etest=extent.createTest("TestThree started");
+	@Parameters({ "username", "password" })
+	public void success(String username, String password) throws Throwable {
+		ExtentTest etest = extent.createTest("TestThree started");
+		LoginPage loginpage = PageFactory.initElements(driver, LoginPage.class);
 		driver.get(props.getProperty("URL"));
-		//LoginTest lt=new LoginTest();
-		//lt.config();
-		//lt.logintest();
-		LoginPage loginpage=new LoginPage(driver);
-		driver.manage().timeouts().implicitlyWait(3000,TimeUnit.SECONDS);
-		
-		
-		loginpage.username().sendKeys(props.getProperty("username"));
-		loginpage.password().sendKeys(props.getProperty("password"));
-		loginpage.login().click();
-//		WebDriverWait wait=new WebDriverWait(driver,10);
-//		WebElement 
-		AccountPage accpage=new AccountPage(driver);
-		 
+
+		driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+
+		loginpage.login(driver, username, password);
+
+		AccountPage accpage = new AccountPage(driver);
+
 		Assert.assertTrue(accpage.loginsuccessful().isDisplayed());
-		
-		
-		}
-	
+
+	}
+
 	@AfterTest
 	public void closure() {
 		driver.close();

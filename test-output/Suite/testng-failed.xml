@@ -5,11 +5,14 @@
     <listener class-name="objectrepository.Listener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
+    <parameter name="password" value="rahatal123"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="username" value="dossanialia1408@gmail.com"/>
     <classes>
       <class name="pageclass.LoginTest">
         <methods>
           <include name="closure"/>
-          <include name="logintest"/>
+          <include name="logintest" invocation-numbers="0"/>
           <include name="config"/>
         </methods>
       </class> <!-- pageclass.LoginTest -->

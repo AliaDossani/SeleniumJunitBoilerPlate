@@ -9,12 +9,16 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">16.670</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">8.508</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">pageclass.AccountTest</td><td><a href="#m0">success</a></td><td rowspan="1">1679152840078</td><td rowspan="1">1463</td></tr><tr class="passedodd"><td rowspan="2">pageclass.LoginTest</td><td><a href="#m1">faillogintest</a></td><td rowspan="1">1679152833156</td><td rowspan="1">1183</td></tr><tr class="passedodd"><td><a href="#m2">logintest</a></td><td rowspan="1">1679152834348</td><td rowspan="1">1208</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">pageclass.LoginTest</td><td><a href="#m0">closure</a></td><td rowspan="1">1679308631698</td><td rowspan="1">1</td></tr><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">pageclass.LoginTest</td><td><a href="#m1">logintest</a></td><td rowspan="1">1679308623858</td><td rowspan="1">7822</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">pageclass.AccountTest#success</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">pageclass.LoginTest#faillogintest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">pageclass.LoginTest#logintest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">pageclass.LoginTest#closure</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at pageclass.LoginTest.closure(LoginTest.java:90)
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">pageclass.LoginTest#logintest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>dossanialia1408@gmail.com</td><td>rahatal123</td><td>chrome</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">java.lang.NullPointerException
+	at pageclass.LoginTest.logintest(LoginTest.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

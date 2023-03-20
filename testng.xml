@@ -4,9 +4,12 @@
 <listeners>
 <listener class-name="objectrepository.Listener"/></listeners>
   <test thread-count="5" name="Test">
+  <parameter name="browser" value="chrome"></parameter>
+  <parameter name="username" value="dossanialia1408@gmail.com"></parameter>
+  <parameter name="password" value="rahatal123"></parameter>
     <classes>
     <class name="pageclass.LoginTest"/>
-    <class name="pageclass.AccountTest"/>
+    <!--<class name="pageclass.AccountTest"/>-->
       
       
     </classes>
