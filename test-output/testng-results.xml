@@ -1,43 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-18T16:20:25 CET" name="Suite" finished-at="2023-03-18T16:20:42 CET" duration-ms="16670">
+  <suite started-at="2023-03-20T19:37:24 CET" name="Default suite" finished-at="2023-03-20T19:37:31 CET" duration-ms="7443">
     <groups>
     </groups>
-    <test started-at="2023-03-18T16:20:25 CET" name="Test" finished-at="2023-03-18T16:20:42 CET" duration-ms="16670">
-      <class name="pageclass.AccountTest">
-        <test-method is-config="true" signature="config()[pri:0, instance:pageclass.AccountTest@413d1baf]" started-at="2023-03-18T16:20:35 CET" name="config" finished-at="2023-03-18T16:20:40 CET" duration-ms="4507" status="PASS">
+    <test started-at="2023-03-20T19:37:24 CET" name="Default test" finished-at="2023-03-20T19:37:31 CET" duration-ms="7443">
+      <class name="pageclass.LaunchTest">
+        <test-method signature="login()[pri:0, instance:pageclass.LaunchTest@5afa3c9]" started-at="2023-03-20T19:37:24 CET" name="login" finished-at="2023-03-20T19:37:31 CET" duration-ms="6912" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: cannot determine loading status
+from no such window
+  (Session info: chrome=111.0.5563.64)
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.3', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b9bcd42f35a616d97353a149583eb809, findElement {using=xpath, value=//nav[@class='master-breadcrumb']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.64, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/ms/r5jmxh397k5...}, goog:chromeOptions: {debuggerAddress: localhost:60548}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:60548/devtoo..., se:cdpVersion: 111.0.5563.64, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b9bcd42f35a616d97353a149583eb809]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from no such window
+  (Session info: chrome=111.0.5563.64)
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.3', java.version: '11.0.15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b9bcd42f35a616d97353a149583eb809, findElement {using=xpath, value=//nav[@class='master-breadcrumb']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.64, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/ms/r5jmxh397k5...}, goog:chromeOptions: {debuggerAddress: localhost:60548}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:60548/devtoo..., se:cdpVersion: 111.0.5563.64, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b9bcd42f35a616d97353a149583eb809
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:197)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:193)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+at pageclass.LaunchTest.login(LaunchTest.java:57)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- config -->
-        <test-method signature="success()[pri:0, instance:pageclass.AccountTest@413d1baf]" started-at="2023-03-18T16:20:40 CET" name="success" finished-at="2023-03-18T16:20:41 CET" duration-ms="1463" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- success -->
-        <test-method is-config="true" signature="closure()[pri:0, instance:pageclass.AccountTest@413d1baf]" started-at="2023-03-18T16:20:41 CET" name="closure" finished-at="2023-03-18T16:20:42 CET" duration-ms="785" status="PASS">
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="closure()[pri:0, instance:pageclass.LaunchTest@5afa3c9]" started-at="2023-03-20T19:37:31 CET" name="closure" finished-at="2023-03-20T19:37:31 CET" duration-ms="380" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closure -->
-      </class> <!-- pageclass.AccountTest -->
-      <class name="pageclass.LoginTest">
-        <test-method is-config="true" signature="config()[pri:0, instance:pageclass.LoginTest@48075da3]" started-at="2023-03-18T16:20:26 CET" name="config" finished-at="2023-03-18T16:20:33 CET" duration-ms="7071" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- config -->
-        <test-method signature="faillogintest()[pri:0, instance:pageclass.LoginTest@48075da3]" started-at="2023-03-18T16:20:33 CET" name="faillogintest" finished-at="2023-03-18T16:20:34 CET" duration-ms="1183" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- faillogintest -->
-        <test-method signature="logintest()[pri:0, instance:pageclass.LoginTest@48075da3]" started-at="2023-03-18T16:20:34 CET" name="logintest" finished-at="2023-03-18T16:20:35 CET" duration-ms="1208" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintest -->
-        <test-method is-config="true" signature="closure()[pri:0, instance:pageclass.LoginTest@48075da3]" started-at="2023-03-18T16:20:42 CET" name="closure" finished-at="2023-03-18T16:20:42 CET" duration-ms="340" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closure -->
-      </class> <!-- pageclass.LoginTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- pageclass.LaunchTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
